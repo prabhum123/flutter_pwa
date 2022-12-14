@@ -115,17 +115,19 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-      const url = 'https://blog.logrocket.com';
-      if(await canLaunch(url)){
-        await launch(url, forceWebView: true);  //forceWebView is true now
-      }else {
-        throw 'Could not launch $url';
-      }
-    },
+        onPressed: () 
+    async {
+      final Uri _url = Uri.parse('https://blog.logrocket.com');
+  if (!await launchUrl(_url)) {
+    throw 'Could not launch $_url';
+  }
+},
+
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+
+  
 }
