@@ -1,11 +1,11 @@
 {
   "name": "BMI Calculator Online",
-  "short_name": "BMI Calculator",
+  "short_name": "Tickets PWA",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#E91E63",
   "theme_color": "#F8C8DC",
-  "description": "Calculate your Body Mass Index (BMI) online.",
+  "description": "Tickets Check in ",
   "orientation": "portrait-primary",
   "prefer_related_applications": false,
   "icons": [
