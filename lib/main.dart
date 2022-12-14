@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'dart:html' as html;
+import 'dart:js' as js;
 
 void main() {
   runApp(const MyApp());
@@ -115,14 +117,20 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          final Uri _url = Uri.parse('https://ticket.rakuten.co.jp/');
-          if (!await launchUrl(
-            _url,
-            mode: LaunchMode.platformDefault,
-          )) {
-            throw 'Could not launch $_url';
-          }
+        onPressed:
+            // () async {
+            //   //final Uri _url = Uri.parse('https://ticket.rakuten.co.jp/');
+            //   final Uri _url = Uri.parse('https://ticket.rakuten.co.jp/');
+
+            //   if (!await launchUrl(
+            //     _url,
+            //     mode: LaunchMode.inAppWebView,
+            //   )) {
+            //     throw 'Could not launch $_url';
+            //   }
+            // },
+            () {
+          js.context.callMethod('open', ['https://ticket.rakuten.co.jp/']);
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
