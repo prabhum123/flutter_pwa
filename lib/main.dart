@@ -118,7 +118,11 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () 
     async {
       final Uri _url = Uri.parse('https://blog.logrocket.com');
-  if (!await launchUrl(_url)) {
+  if (!await launchUrl(_url,
+  mode: LaunchMode.inAppWebView,
+      webViewConfiguration: const WebViewConfiguration(
+          headers: <String, String>{'my_header_key': 'my_header_value'}),
+  )) {
     throw 'Could not launch $_url';
   }
 },
