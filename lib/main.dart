@@ -91,16 +91,17 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () async {
                         js.context.callMethod(
                             'open', ['https://ticket.rakuten.co.jp/']);
                       },
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      elevation: 1.5,
-                      color: Colors.white,
-                      padding: const EdgeInsets.all(16),
+                      style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 40.0, vertical: 20.0),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0)),
+                          primary: Colors.white),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
@@ -122,13 +123,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   SizedBox(width: 24),
                   Expanded(
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () {},
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      elevation: 1.5,
-                      color: Colors.white,
-                      padding: const EdgeInsets.all(16),
+                      style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 40.0, vertical: 20.0),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0)),
+                          primary: Colors.white),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
