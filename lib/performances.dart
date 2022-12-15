@@ -13,13 +13,8 @@ class _PerformancesState extends State<Performances> {
           title: const Text('Navigate to a new screen on Button click'),
           backgroundColor: Colors.blueAccent),
       body: Center(
-        child: FlatButton(
-          color: Colors.blueAccent,
-          textColor: Colors.white,
-          onPressed: () {
-            
-
-          },
+        child: ElevatedButton(
+          onPressed: () {},
           child: Text('GO TO HOME'),
         ),
       ),
