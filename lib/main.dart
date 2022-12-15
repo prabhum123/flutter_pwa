@@ -3,6 +3,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:hello/performances.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:html' as html;
 import 'dart:js' as js;
@@ -124,7 +125,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   SizedBox(width: 24),
                   Expanded(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => Performances()));
+                      },
                       style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.symmetric(
                               horizontal: 40.0, vertical: 20.0),
