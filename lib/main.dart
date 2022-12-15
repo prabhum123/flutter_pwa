@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter PWA Demo',
       theme: ThemeData(
           appBarTheme: AppBarTheme(
             color: Color.fromRGBO(140, 15, 13, 1),
@@ -111,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            "CMS Website",
+                            "CMS",
                             style: TextStyle(
                               color: Color.fromRGBO(140, 15, 13, 0.9),
                               fontWeight: FontWeight.bold,
