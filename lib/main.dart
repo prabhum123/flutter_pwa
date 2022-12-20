@@ -4,6 +4,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:hello/performances.dart';
+import 'package:hello/test.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:html' as html;
 import 'dart:js' as js;
@@ -127,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => Performances()));
+                            builder: (context) => Test()));
                       },
                       style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.symmetric(
