@@ -9,7 +9,7 @@ class Test extends StatefulWidget {
 }
 
 class _TestState extends State<Test> {
-  String url = 'https://randomuser.me/api/?results=10';
+  String url = 'http://demo1012754.mockable.io/performances';
   late List data;
   bool _isDataLoading = true;
 
@@ -21,7 +21,7 @@ class _TestState extends State<Test> {
 
     setState(() {
       var listData = json.decode(response.body);
-      data = listData['results'];
+      data = listData['performances'];
 
       _isDataLoading = false;
     });
@@ -52,13 +52,11 @@ class _TestState extends State<Test> {
                       elevation: 5,
                       child: ListTile(
                         tileColor: Colors.white,
-                        title:
-                            //Text(data[index]['name'],
-                            Text(data[index]['name']['first'],
-                                style: TextStyle(
-                                    color: Color.fromRGBO(140, 15, 13, 0.9),
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20)),
+                        title: Text(data[index]['name'],
+                            style: TextStyle(
+                                color: Color.fromRGBO(140, 15, 13, 0.9),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20)),
                         onTap: () {},
                       ),
                     ),
